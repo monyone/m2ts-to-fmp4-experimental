@@ -43,7 +43,7 @@ export default class M2TStoFMP4 {
 
   public transmux(chunk: Uint8Array) {
     const demux_result = this.demuxer.demux(chunk, 0);
-    const remux_result = remuxer.remux(
+    const remux_result = this.remuxer.remux(
       demux_result.audioTrack,
       demux_result.avcTrack,
       demux_result.id3Track,
