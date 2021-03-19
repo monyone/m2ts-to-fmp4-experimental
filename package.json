@@ -1,0 +1,44 @@
+{
+  "name": "m2ts-to-fmp4-experimental",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "main": "dist/m2ts_to_fmp4.js",
+  "files": [
+    "dist/**/*",
+    "src/**/*",
+  ],
+  "author": "monyone <monyone.teihen@gmail.com>",
+  "description": "convert m2ts to fmp4 utility using hls.js",
+  "keywords": [
+    "m2ts",
+    "fmp4",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monyone/m2ts-to-fmp4-experimental"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
+    "@babel/plugin-proposal-optional-chaining": "^7.13.8",
+    "@babel/plugin-transform-object-assign": "^7.12.13",
+    "@babel/preset-env": "^7.13.10",
+    "@babel/preset-typescript": "^7.13.0",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "html-webpack-plugin": "^5.2.0",
+    "terser-webpack-plugin": "^5.1.1",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
+    "webworkify-webpack": "^2.1.5"
+  },
+  "dependencies": {
+    "eventemitter3": "^4.0.7",
+    "hls.js": "^1.0.0-rc.5",
+    "url-toolkit": "^2.2.1"
+  }
+}
