@@ -5,13 +5,13 @@
   "main": "dist/m2ts_to_fmp4.js",
   "files": [
     "dist/**/*",
-    "src/**/*",
+    "src/**/*"
   ],
   "author": "monyone <monyone.teihen@gmail.com>",
   "description": "convert m2ts to fmp4 utility using hls.js",
   "keywords": [
     "m2ts",
-    "fmp4",
+    "fmp4"
   ],
   "repository": {
     "type": "git",

@@ -3,6 +3,7 @@ import MP4Remuxer from 'hls.js/src/remux/mp4-remuxer';
 
 import Hls from 'hls.js';
 import { hlsDefaultConfig } from 'hls.js/src/config';
+import { appendUint8Array } from 'hls.js/src/utils/mp4-tools'
 
 import { EventEmitter } from 'eventemitter3';
 
@@ -31,11 +32,25 @@ export default class M2TStoFMP4 {
 
     this.demuxer = new TSDemuxer(this.hlsEventEmitter, this.hlsConfig, this.typeSupported);
     this.remuxer = new MP4Remuxer(this.hlsEventEmitter, this.hlsConfig, this.typeSupported);
+
+    this.initialize()
   }  
 
   public initialize(): void {
     this.demuxer.resetInitSegment(undefined, undefined, true);
     this.demuxer.resetTimeStamp();
+  }
+
+  public transmux(chunk: Uint8Array) {
+    const demux_result = this.demuxer.demux(chunk, 0);
+    const remux_result = remuxer.remux(
+      demux_result.audioTrack,
+      demux_result.avcTrack,
+      demux_result.id3Track,
+      demux_result.textTrack,
+      0, false, false
+    );
+    return remux_result;
   }
 
   public getHlsEventEmitter () {
@@ -50,7 +65,11 @@ export default class M2TStoFMP4 {
     return this.remuxer;
   }
 
-  public static isSupported() {
-    return Hls.isSupported();    
+  public static isSupported(): boolean {
+    return Hls.isSupported();
+  }
+
+  public static appendUint8Array(data1: Uint8Array, data2: Uint8Array): Uint8Array {
+    return appendUint8Array(data1, data2);
   }
 }
