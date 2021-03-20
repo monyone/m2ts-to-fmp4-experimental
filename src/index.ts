@@ -15,10 +15,10 @@ const defalutTypeSupported = {
 
 export default class M2TStoFMP4 {
   private hlsEventEmitter = new EventEmitter();
-  private hlsConfig!;
-  private typeSupported!;
-  private demuxer!;
-  private remuxer!;
+  private hlsConfig!: HlsConfig;
+  private typeSupported = defalutTypeSupported;
+  private demuxer!: TSDemuxer;
+  private remuxer!: MP4Remuxwer;
 
   public constructor(hlsConfig?, typeSupported?) {
     this.hlsConfig = {
