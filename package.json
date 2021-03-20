@@ -1,12 +1,13 @@
 {
   "name": "m2ts-to-fmp4-experimental",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "Apache-2.0",
   "main": "dist/m2ts_to_fmp4.js",
   "files": [
     "dist/**/*",
     "d.ts/**/*",
-    "src/**/*"
+    "src/**/*",
+    "tsconfig.json"
   ],
   "author": "monyone <monyone.teihen@gmail.com>",
   "description": "convert m2ts to fmp4 utility using hls.js",
