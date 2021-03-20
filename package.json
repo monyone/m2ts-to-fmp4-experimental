@@ -1,8 +1,9 @@
 {
   "name": "m2ts-to-fmp4-experimental",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "license": "Apache-2.0",
   "main": "dist/m2ts_to_fmp4.js",
+  "types": "d.ts/index.d.ts",
   "files": [
     "dist/**/*",
     "d.ts/**/*",
