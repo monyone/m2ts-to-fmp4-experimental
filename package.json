@@ -1,10 +1,11 @@
 {
   "name": "m2ts-to-fmp4-experimental",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "Apache-2.0",
   "main": "dist/m2ts_to_fmp4.js",
   "files": [
     "dist/**/*",
+    "d.ts/**/*",
     "src/**/*"
   ],
   "author": "monyone <monyone.teihen@gmail.com>",
@@ -18,7 +19,9 @@
     "url": "https://github.com/monyone/m2ts-to-fmp4-experimental"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "npm-run-all webpack tsc",
+    "webpack": "webpack",
+    "tsc": "tsc --project tsconfig.json"
   },
   "devDependencies": {
     "@babel/core": "^7.13.10",
@@ -31,7 +34,9 @@
     "babel-loader": "^8.2.2",
     "clean-webpack-plugin": "^3.0.0",
     "html-webpack-plugin": "^5.2.0",
+    "npm-run-all": "^4.1.5",
     "terser-webpack-plugin": "^5.1.1",
+    "typescript": "^4.2.3",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0",
     "webworkify-webpack": "^2.1.5"
