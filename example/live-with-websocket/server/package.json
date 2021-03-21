@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "chokidar": "^3.5.1",
+    "commander": "^7.1.0",
     "fluent-ffmpeg": "^2.1.2",
     "stream-chunker": "^1.2.8",
     "tmp": "^0.2.1",
