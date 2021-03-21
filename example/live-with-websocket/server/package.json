@@ -5,7 +5,10 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "chokidar": "^3.5.1",
+    "fluent-ffmpeg": "^2.1.2",
     "stream-chunker": "^1.2.8",
+    "tmp": "^0.2.1",
     "ws": "^7.4.3"
   }
 }
